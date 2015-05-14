@@ -1,0 +1,7 @@
+project=local
+table=feature_out
+columns=user_id:BIGINT,item_id:BIGINT,click_total:BIGINT,fav_total:BIGINT,cart_total:BIGINT,buy_total:BIGINT,click_lastthreeday:BIGINT,fav_lastthreeday:BIGINT,cart_lastthreeday:BIGINT,buy_lastthreeday:BIGINT,click_lastweek:BIGINT,fav_lastweek:BIGINT,cart_lastweek:BIGINT,buy_lastweek:BIGINT,click_dayofweek:BIGINT,fav_dayofweek:BIGINT,cart_dayofweek:BIGINT,buy_dayofweek:BIGINT,click_perday:DOUBLE,fav_perday:DOUBLE,cart_perday:DOUBLE,buy_perday:DOUBLE,click_flag:BIGINT,fav_flag:BIGINT,cart_flag:BIGINT,buy_flag:BIGINT,cvr:DOUBLE,cvr_perday:DOUBLE,buy_firstday:BIGINT,buy_lastday:BIGINT,action_length:BIGINT,click_lastinterval:BIGINT,buy_lastinterval:BIGINT
+
+
+
+

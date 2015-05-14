@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapred>
+    <!-- profile -->
+    <baseId>c18b48065e4f9d461e2931bfaef39db8</baseId>
+    <projectId>2474</projectId>
+    <resourceName>PairFeature</resourceName>
+    <idePath>工作流/feature/pair_feature</idePath>
+
+    <!-- classes -->
+    <jobLauncher>nk.imi.alirs.PairFeature.JobLauncher</jobLauncher>
+    <mapper>nk.imi.alirs.PairFeature.PairFeatureMapper</mapper>
+    <reducer>nk.imi.alirs.PairFeature.PairFeatureReducer</reducer>
+    <!--  <combiner>nk.imi.alirs.PairFeature.MyCombiner</combiner>-->
+
+    <!--task-->
+    <mapOutputKey>userId:bigint,itemId:bigint</mapOutputKey>
+    <mapOutputValue>
+    clickTotal:bigint,favTotal:bigint,cartTotal:bigint,buyTotal:bigint,
+    clickLastThreeday:bigint,favLastThreeday:bigint,cartLastThreeday:bigint,buyLastThreeday:bigint,
+    clickLastWeekday:bigint,favLastWeekday:bigint,cartLastWeekday:bigint,buyLastWeekday:bigint,
+    clickTheDayOfWeek:bigint,favTheDayOfWeek:bigint,cartTheDayOfWeek:bigint,buyTheDayOfWeek:bigint,
+    clickTime:bigint,favTime:bigint,cartTime:bigint,buyTime:bigint
+    </mapOutputValue>
+    <!--
+    <partitionColumns>col1,col2</partitionColumns>
+    <outputKeySortColumns>col1,col2</outputKeySortColumns>
+    <outputKeySortOrders>ASC,DESC</outputKeySortOrders>
+    <outputGroupingColumns>col1,col2</outputGroupingColumns>
+    <numReduceTask>8</numReduceTask>
+    <memoryForMapTask>2048</memoryForMapTask>
+    <memoryForReduceTask>2048</memoryForReduceTask>
+    -->
+
+    <!-- tables -->
+    <inputTables>
+        <table>
+            <name>tianchi_mobile_recommend_train_user</name>
+            <!--
+            <partitions>
+                <partition>dt={yyyymmdd}</partition>
+                <partition>dt={yyyymmdd-1}</partition>
+            </partitions>
+            -->
+        </table>
+    </inputTables>
+    <outputTable>
+        <!--  <name>feature_{type}_{yyyymmdd}</name>-->
+        <name>feature_{type}</name>
+          
+        <partition>dt={yyyymmdd}</partition>
+        
+    </outputTable>
+</mapred>

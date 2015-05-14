@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><configuration>
+<property><name>odps.mapred.reduce.class</name><value>nk.imi.alirs.PairFeature.PairFeatureReducer</value></property>
+<property><name>odps.mapred.map.class</name><value>nk.imi.alirs.PairFeature.PairFeatureMapper</value></property>
+<property><name>odps.mapred.output.desc</name><value>[{"tblName":"feature_out","partSpec":{},"label":"__default__"}]</value></property>
+<property><name>odps.mapred.mapoutput.key.schema</name><value>userId:BIGINT,itemId:BIGINT</value></property>
+<property><name>odps.mapred.job.name</name><value>mr_20150513165145_655_5104</value></property>
+<property><name>odps.mapred.mapoutput.value.schema</name><value>clickTotal:BIGINT,favTotal:BIGINT,cartTotal:BIGINT,buyTotal:BIGINT,clickLastThreeday:BIGINT,favLastThreeday:BIGINT,cartLastThreeday:BIGINT,buyLastThreeday:BIGINT,clickLastWeekday:BIGINT,favLastWeekday:BIGINT,cartLastWeekday:BIGINT,buyLastWeekday:BIGINT,clickTheDayOfWeek:BIGINT,favTheDayOfWeek:BIGINT,cartTheDayOfWeek:BIGINT,buyTheDayOfWeek:BIGINT,clickTime:BIGINT,favTime:BIGINT,cartTime:BIGINT,buyTime:BIGINT</value></property>
+<property><name>type</name><value>0</value></property>
+<property><name>seperator</name><value>2014-12-19 00</value></property>
+<property><name>odps.mapred.input.desc</name><value>[{"tblName":"user_behavior_mock","partSpec":{},"label":"__default__"}]</value></property>
+</configuration>
